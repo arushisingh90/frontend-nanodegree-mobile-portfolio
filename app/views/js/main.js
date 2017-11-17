@@ -504,7 +504,9 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
   
-  // OPTIMIZATION: Moved phase calculation outside loop
+  // OPTIMIZATION: Moved phase calculation outside loop. 
+  // Since j%5 can only have values from 0-4, phase calulation is done in a 0-4 loop and stored in array
+  
   // document.body.scrollTop is no longer supported in Chrome.
   var top = (document.documentElement.scrollTop || document.body.scrollTop) / 1250;
   var phaseArr = [];
