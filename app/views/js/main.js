@@ -553,6 +553,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //OPTIMIZATION: Initialized movingPizzas1 ouside loop
   var movingPizzas1 = document.querySelector("#movingPizzas1");
   //OPTIMIZATION: Decreased pizza image count based on window size
+  //Credit: https://github.com/nerdstep/udacity-frontend-nanodegree-p4-website-optimization
   for (var i = 0; i < numPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
